@@ -1,4 +1,11 @@
-## [unreleased]
+## 0.4.1 (2026-10-21)
+
+### Bug fixes
+
+- Outbound HTTPS (OIDC discovery, JWKS, GitHub API) now trusts the system CA store instead of the `webpki-roots` set compiled into the binary, so CA distrust such as the [eMudhra intermediate compromise](https://emudhra.we-have-a-problem.com/) follows OS CA updates. [#1](https://github.com/sorah/sts-cat/pull/1)
+- rustls-webpki rolled to 0.103.16, which rejects certificate paths through the compromised eMudhra intermediates. [#1](https://github.com/sorah/sts-cat/pull/1)
+
+## 0.4.0 (2026-05-12)
 
 ### Enhancements
 
