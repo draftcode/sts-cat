@@ -1,7 +1,7 @@
-amends "package://github.com/jdx/hk/releases/download/v1.37.0/hk@1.37.0#/Config.pkl"
-import "package://github.com/jdx/hk/releases/download/v1.37.0/hk@1.37.0#/Builtins.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
 
-local linters = new Mapping<String, Step> {
+steps {
   ["cargo-clippy"] = Builtins.cargo_clippy
   ["cargo-fmt"] = Builtins.cargo_fmt
   ["newlines"] = Builtins.newlines
@@ -9,16 +9,8 @@ local linters = new Mapping<String, Step> {
 }
 
 hooks {
-    ["pre-commit"] {
-        fix = true
-        stash = "git"
-        steps = linters
-    }
-    ["fix"] {
-        fix = true
-        steps = linters
-    }
-    ["check"] {
-        steps = linters
-    }
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+  }
 }
