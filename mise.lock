@@ -50,9 +50,12 @@ url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/3849249
 provenance = "github-attestations"
 
 [[tools."cargo:cargo-lambda"]]
-version = "1.9.1"
+version = "1.9.2"
 backend = "cargo:cargo-lambda"
-specifiers = ["latest"]
+specifiers = [
+    "1.9.2",
+    "latest",
+]
 
 [[tools.hk]]
 version = "2.7.0"

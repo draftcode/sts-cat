@@ -1,6 +1,6 @@
 [tools]
 actionlint = "latest"
-"cargo:cargo-lambda" = "latest"
+"cargo:cargo-lambda" = "1.9.2"
 hk = "2"
 pkl = "latest"
 zig = "latest"
